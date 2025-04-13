@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .container{
+                display: flex;
+                flex-direction: column;
+                width: 300px;
+                padding: 15px;
+                border: 1px solid skyblue;
+                border-radius: 5px;
+            }
+            input{
+                margin: 5px 0px;
+                height: 35px;
+                padding: 7px;
+            }
+            button{
+                height: 35px;
+                margin: 5px 0px;
+                background-color: skyblue;
+                border: none;
+                border-radius: 5px;
+                color: #333;
+            }
+            button:hover{
+                background-color: #333;
+                color: skyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <strong> CẢNH BÁO !!!</strong>
+        <div class="container">
+            <h2>Cẩn thận khi đăng nhập</h2>
+
+  <input type="text" id="username" placeholder="Tên đăng nhập"><br>
+  <input type="password" id="password" placeholder="Mật khẩu"><br>
+  <button onclick="dangNhap()">Đăng nhập</button>
+  <p id="thongbao"></p>
+
+  <script>
+    function dangNhap() {
+      let ten = document.getElementById("username").value;
+      let mk = document.getElementById("password").value;
+
+      // Tài khoản mẫu
+      let userDung = "Jackj97";
+      let passDung = "jackbocon";
+
+      if (ten === userDung && mk === passDung) {
+        document.getElementById("thongbao").innerHTML = "✅Chúc mừng bạn đã có bầu!";
+        // Chuyển trang hoặc xử lý thêm tại đây
+      } else {
+        document.getElementById("thongbao").innerHTML = "❌ mất con !";
+      }
+    }
+  </script>
+
+        </div>
+    </body>
+</html>
